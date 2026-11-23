@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Build Windows NSIS Installer (.exe)
-        run: npm run build-win
+        run: run: npx electron-builder --win nsis --publish never
 
       - name: Upload Windows Installer Artifact
         uses: actions/upload-artifact@v4
